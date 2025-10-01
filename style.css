@@ -3,15 +3,16 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #fafafa;
+  background: #ffffff;
   color: #222;
   line-height: 1.6;
+  display: flex;
 }
 
 header {
-  background: #4b2e83; /* CMU purple tone */
-  color: white;
+  background: #eaf2fb; /* light blue */
   padding: 15px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 nav {
@@ -21,48 +22,65 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #333;
   font-weight: 600;
   text-decoration: none;
   transition: 0.2s;
 }
 
 nav a:hover {
-  color: #ffd6f3;
+  color: #0077b6; /* blue accent */
+}
+
+.sidebar {
+  width: 220px;
+  background: #f7f7f7;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.sidebar img {
+  max-width: 160px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.sidebar a {
+  display: block;
+  margin: 10px 0;
+  color: #0077b6;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar a i {
+  margin-right: 8px;
 }
 
 .container {
-  max-width: 1000px;
+  flex: 1;
+  max-width: 900px;
   margin: auto;
   padding: 40px 20px;
 }
 
 h1, h2, h3 {
-  color: #4b2e83;
+  color: #0077b6;
   margin-bottom: 12px;
 }
 
 a.link {
-  color: #4b2e83;
+  color: #0077b6;
   text-decoration: underline;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: #eee;
+  background: #f0f0f0;
   margin-top: 40px;
   font-size: 14px;
   color: #555;
-}
-
-img.profile {
-  border-radius: 50%;
-  max-width: 180px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.section {
-  margin-bottom: 40px;
 }
