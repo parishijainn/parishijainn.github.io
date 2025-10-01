@@ -4,71 +4,68 @@
   <meta charset="UTF-8">
   <title>Parishi Jain | Projects</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="cv.html">CV</a>
-      <a href="about.html">About Me</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <h1>Projects</h1>
-
-    <!-- Current Project -->
-    <div class="section">
-      <h2>Current Project</h2>
-      <h3>
-        <a class="link" href="https://cmu-variability.github.io/projects/grace.html" target="_blank">
-          Gesture and Gaze Recognition for Accessible Collaborative Environments
-        </a>
-      </h3>
-      <p>This research project, part of the GRACE initiative at Carnegie Mellon, is focused on creating tools that combine gaze and gesture recognition to generate direct screen references. The goal is to make collaboration more accessible for blind and low-vision (BLV) users by translating non-verbal cues into accessible feedback. My work includes prototyping system components, running user studies, and analyzing multimodal interaction data.</p>
-    </div>
-
-    <!-- Past Projects -->
-    <div class="section">
-      <h2>Past Projects</h2>
-
-      <h3>King’s Closet</h3>
-      <p>
-        <a href="https://youtu.be/AO7PUn8GqX4" target="_blank">Demo</a> | 
-        <a href="https://github.com/15-112-s25/prelim-group-92-tp" target="_blank">Code</a>
-      </p>
-      <p>A CMU Graphics–based recreation of Cher Horowitz’s virtual closet from *Clueless*. Users can browse, try on, and grade outfits using a combination of tops and bottoms. The game features an outfit grader powered by KMeans clustering for color-matching analysis, and a MediaPipe-powered hand-tracking mode for touchless navigation. I designed the grading system, hand-tracking mode, and user interface.</p>
-
-      <h3>Stellar Sprint</h3>
-      <p>
-        <a href="https://youtu.be/9dsdgeyWNr8" target="_blank">Demo</a> | 
-        <a href="https://github.com/parishijainn/15112TermProject24" target="_blank">Code</a>
-      </p>
-      <p>An engaging Flappy Bird–style game where players control a spaceship to collect stars and avoid obstacles. The game introduces increasing difficulty across multiple levels, with both keyboard and hand-tracking control modes. It also supports single-player, two-player, and player-vs-computer modes. I developed the gameplay logic, gesture control integration, and level progression system.</p>
-
-      <h3>NeuralSeek Accessibility Agent</h3>
-      <p>
-        <a href="https://youtu.be/50ygIdbjuH4" target="_blank">Demo</a>
-      </p>
-      <p>A multi-agent system built during my internship at NeuralSeek to automatically audit code, design docs, and UI screenshots for accessibility compliance (WCAG 2.1, ADA, AODA, Section 508). The tool detects high, medium, and low accessibility issues in minutes, tasks that typically take hours of manual review. It leverages OCR, routing logic, and modular agents with Virtual KBs and Guardrails. I designed workflows, tested agent modularity, and ensured scalability of accessibility audits.</p>
-
-      <h3>Hack112: 112 Run</h3>
-      <p>
-        <a href="https://github.com/vaishnavipalas/hack112--112-run" target="_blank">Code</a>
-      </p>
-      <p>A Temple Run–inspired game developed at Hack112 where players collect coins, dodge obstacles, and answer Python practice questions along the way. The game integrates computer vision, allowing users to control their character with finger-tracking gestures. I implemented the coin/obstacle mechanics and helped integrate the computer vision–based control system.</p>
-
-      <h3>Duquesne Incline Website Redesign</h3>
-      <p>
-        <a href="https://github.com/parishijainn/WebDevProject-Duquesne-Incline-Website" target="_blank">Source Code</a>
-      </p>
-      <p>Our team was tasked with revamping the outdated Duquesne Incline website. We redesigned and developed a mobile-first, cross-browser compatible site using HTML, CSS, JavaScript, and jQuery. Key features include Google Maps API integration, form validation, and a dynamic image carousel. Through usability testing, we implemented improvements such as clearer navigation, sidebar consistency, and optimized content structure to enhance the user experience.</p>
-    </div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="assets/profile.jpeg" alt="Parishi Jain headshot">
+    <a href="mailto:parishij@andrew.cmu.edu"><i class="fas fa-envelope"></i> Email</a>
+    <a href="https://github.com/parishijainn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/parishi--jain/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
   </div>
 
-  <footer>
-    <p>© 2025 Parishi Jain</p>
-  </footer>
+  <div class="main">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Projects</h1>
+
+      <div class="section">
+        <h2>Current Project</h2>
+        <h3>
+          <a class="link" href="https://cmu-variability.github.io/projects/grace.html" target="_blank">
+            Gesture and Gaze Recognition for Accessible Collaborative Environments
+          </a>
+        </h3>
+        <p>Part of CMU’s GRACE initiative, this project explores gaze and gesture recognition to support blind and low-vision (BLV) users. My role includes prototyping, running user studies, and analyzing multimodal interaction data.</p>
+      </div>
+
+      <div class="section">
+        <h2>Past Projects</h2>
+
+        <h3>King’s Closet</h3>
+        <p><a href="https://youtu.be/AO7PUn8GqX4" target="_blank">Demo</a> | <a href="https://github.com/15-112-s25/prelim-group-92-tp" target="_blank">Code</a></p>
+        <p>Recreation of Cher Horowitz’s virtual closet from *Clueless*. Features outfit grading using KMeans clustering and MediaPipe-powered gesture controls.</p>
+
+        <h3>Stellar Sprint</h3>
+        <p><a href="https://youtu.be/9dsdgeyWNr8" target="_blank">Demo</a> | <a href="https://github.com/parishijainn/15112TermProject24" target="_blank">Code</a></p>
+        <p>A Flappy Bird–style game with increasing levels, gesture control, and multiplayer support.</p>
+
+        <h3>NeuralSeek Accessibility Agent</h3>
+        <p><a href="https://youtu.be/50ygIdbjuH4" target="_blank">Demo</a></p>
+        <p>A system to audit code and designs for accessibility compliance. I built modular workflows and tested scalability.</p>
+
+        <h3>Hack112: 112 Run</h3>
+        <p><a href="https://github.com/vaishnavipalas/hack112--112-run" target="_blank">Code</a></p>
+        <p>Temple Run–inspired game where players collect coins and answer Python questions, controlled with finger tracking.</p>
+
+        <h3>Duquesne Incline Website Redesign</h3>
+        <p><a href="https://github.com/parishijainn/WebDevProject-Duquesne-Incline-Website" target="_blank">Source Code</a></p>
+        <p>Revamped outdated website with responsive design, Google Maps integration, form validation, and usability-tested improvements.</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Parishi Jain</p>
+    </footer>
+  </div>
 </body>
 </html>
