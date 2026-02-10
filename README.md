@@ -1,10 +1,10 @@
 ## Parishi Jain — Portfolio
 
-This repository publishes Parishi Jain’s portfolio to **GitHub Pages** at:
+This repo deploys Parishi Jain’s portfolio to **GitHub Pages** at:
 
 - `https://parishijainn.github.io/`
 
-The site is a **Next.js static export** located in:
+The site is a **Next.js static export** in:
 
 - `Parishi Jain Portfolio/parishi-jain-portfolio`
 
@@ -20,7 +20,7 @@ Deployment is automatic via GitHub Actions.
 
 ### How it deploys
 
-- Pushing to **`main`** triggers `.github/workflows/deploy.yml`
+- Pushes to **`main`** trigger `.github/workflows/deploy.yml`
 - The workflow builds a static export and deploys the generated `out/` folder
 
 ### Local development
@@ -33,8 +33,6 @@ npm run dev
 
 ### Troubleshooting
 
-- **Refresh gives 404**: this site uses `trailingSlash: true` with static export so routes map to `.../route/index.html`. Don’t remove trailing slashes unless you change your routing strategy.
+- **Refresh gives 404**: this site uses `trailingSlash: true` with static export so routes map to `.../route/index.html`.
 - **Missing assets**: ensure GitHub Pages is set to **GitHub Actions**, not “Deploy from a branch”.
 - **Actions didn’t run**: check the **Actions** tab for logs.
-
-# Parishi_Jain_Personal_Website
