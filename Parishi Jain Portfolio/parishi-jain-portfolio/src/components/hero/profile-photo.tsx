@@ -4,6 +4,12 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
+function withBasePath(path: string) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  if (!basePath) return path;
+  return `${basePath}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export function ProfilePhoto({
   alt,
   className,
@@ -26,7 +32,7 @@ export function ProfilePhoto({
         // without Next.js Image errors/overlay in dev.
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src="/profile.jpg"
+          src={withBasePath("/profile.jpg")}
           alt={alt}
           className="h-full w-full object-cover"
           onError={() => setErrored(true)}
