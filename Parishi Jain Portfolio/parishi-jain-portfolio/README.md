@@ -58,7 +58,7 @@ This project is configured for **static export** and deployment to **GitHub Page
 
 Your site will be available at:
 
-- `https://parishijainn.github.io/Parishi_Jain_Personal_Website/`
+- `https://parishijainn.github.io/`
 
 ### 4) Local commands (unchanged)
 
@@ -69,6 +69,6 @@ npm run dev
 ### 5) Troubleshooting
 
 - **404 on refresh / deep links**: this site uses `trailingSlash: true` and static export so routes resolve to `.../route/` folders with `index.html`. If you changed routing, rebuild and redeploy.
-- **Missing images/CSS/JS on GitHub Pages**: GitHub Pages serves the site under a repo subpath. This project sets `basePath` + `assetPrefix` automatically in GitHub Actions so assets load from `/<repo-name>/...`.
-- **`/profile.jpg` not showing after deploy**: make sure the file exists at `public/profile.jpg`. Asset URLs are prefixed for GitHub Pages via `NEXT_PUBLIC_BASE_PATH`.
+- **Missing images/CSS/JS on GitHub Pages**: make sure GitHub Pages is set to **GitHub Actions** (not “Deploy from a branch”). This repo is a **user site**, so it is served from the root and uses an empty `basePath`.
+- **`/profile.jpg` not showing after deploy**: make sure the file exists at `public/profile.jpg`.
 - **Workflow didn’t run**: confirm you pushed to `main`, then check the **Actions** tab for logs.

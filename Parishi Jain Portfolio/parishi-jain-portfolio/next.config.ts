@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
-const repoName = "Parishi_Jain_Personal_Website";
-const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-const basePath = isGitHubPages ? `/${repoName}` : "";
+// User-site GitHub Pages (parishijainn.github.io) is served from the root domain.
+// Keep basePath empty so routes/assets work at https://parishijainn.github.io/
+const basePath = "";
 
 const nextConfig: NextConfig = {
   output: "export",

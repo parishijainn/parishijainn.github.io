@@ -4,6 +4,9 @@
 
 *
 !.gitignore
+!.github/
+!.github/**
+!README.md
 !Parishi Jain Portfolio/
 !Parishi Jain Portfolio/parishi-jain-portfolio/
 !Parishi Jain Portfolio/parishi-jain-portfolio/**
