@@ -1,0 +1,10 @@
+# This repo currently lives at your home directory.
+# To prevent accidentally committing personal files, ignore everything by default
+# and explicitly allow only the portfolio project.
+
+*
+!.gitignore
+!Parishi Jain Portfolio/
+!Parishi Jain Portfolio/parishi-jain-portfolio/
+!Parishi Jain Portfolio/parishi-jain-portfolio/**
+

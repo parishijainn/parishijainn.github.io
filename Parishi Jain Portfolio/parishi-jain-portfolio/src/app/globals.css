@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Warm, modern light theme (default) */
+  --bg: #f7f1e6; /* cream */
+  --surface: rgba(255, 253, 248, 0.78); /* soft paper */
+  --surface2: rgba(245, 236, 222, 0.72); /* slightly deeper cream */
+  --fg: #1d1b16; /* deep charcoal */
+  --muted: rgba(29, 27, 22, 0.66);
+  --border: rgba(29, 27, 22, 0.12);
+  --shadow: 0 10px 30px rgba(29, 27, 22, 0.08);
+
+  /* single accent color (LOCKED): #7a7f93 */
+  --accent: #7a7f93;
+  --accentSoft: rgba(122, 127, 147, 0.18);
+  --accentSoft2: rgba(122, 127, 147, 0.28);
+  --accentFg: #fbfaf7;
+}
+
+.dark {
+  /* Optional dark mode (lighter, less “heavy”) */
+  --bg: #0b0d0e;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface2: rgba(255, 255, 255, 0.09);
+  --fg: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.66);
+  --border: rgba(255, 255, 255, 0.14);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+
+  /* tonal variant only */
+  --accent: #9ea3b7;
+  --accentSoft: rgba(158, 163, 183, 0.18);
+  --accentSoft2: rgba(158, 163, 183, 0.28);
+  --accentFg: #0b0d0e;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accentFg: var(--accentFg);
+  --color-accentSoft: var(--accentSoft);
+  --color-accentSoft2: var(--accentSoft2);
+  --font-sans: var(--font-body);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system,
+      Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    text-rendering: geometricPrecision;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), ui-sans-serif, system-ui, -apple-system,
+      Segoe UI, Roboto, Helvetica, Arial;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--accent) 28%, transparent);
+  }
+
+  :focus-visible {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: var(--shadow);
+  }
+
+  @keyframes mesh-shift {
+    0% {
+      background-position: 0% 20%, 100% 0%, 40% 100%;
+      filter: blur(44px);
+      opacity: 0.62;
+    }
+    50% {
+      background-position: 55% 0%, 45% 55%, 0% 80%;
+      filter: blur(50px);
+      opacity: 0.66;
+    }
+    100% {
+      background-position: 0% 20%, 100% 0%, 40% 100%;
+      filter: blur(44px);
+      opacity: 0.62;
+    }
+  }
+
+  .bg-mesh {
+    background-image:
+      radial-gradient(900px 560px at 15% 18%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 60%),
+      radial-gradient(820px 520px at 86% 22%, color-mix(in oklab, var(--accent) 10%, transparent), transparent 64%),
+      radial-gradient(720px 520px at 52% 92%, color-mix(in oklab, var(--fg) 7%, transparent), transparent 62%);
+    background-size: 160% 160%, 170% 170%, 160% 160%;
+    background-repeat: no-repeat;
+    animation: mesh-shift 22s ease-in-out infinite;
+  }
+}
+
