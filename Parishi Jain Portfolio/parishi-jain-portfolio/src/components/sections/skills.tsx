@@ -20,10 +20,23 @@ export function Skills() {
           />
         </InView>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <InView delay={0.04} className="mt-8">
+          <div className="flex flex-wrap gap-2">
+            {site.skillsFocusAreas.map((item) => (
+              <Badge
+                key={item}
+                className="bg-surface border-accentSoft2 text-fg"
+              >
+                {item}
+              </Badge>
+            ))}
+          </div>
+        </InView>
+
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {site.skills.map((group, idx) => (
             <InView key={group.title} delay={idx * 0.04}>
-              <Card className="p-6">
+              <Card className="group p-6 transition-transform will-change-transform hover:-translate-y-0.5">
                 <h3
                   id={idx === 0 ? "skills-title" : undefined}
                   className="text-sm font-semibold text-fg"
@@ -32,7 +45,7 @@ export function Skills() {
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {group.items.map((item) => (
-                    <Badge key={item} className="bg-bg/20">
+                    <Badge key={item} className="group-hover:border-accentSoft2">
                       {item}
                     </Badge>
                   ))}

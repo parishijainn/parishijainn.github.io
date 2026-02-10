@@ -13,7 +13,8 @@ export function HeroBackground({ className }: { className?: string }) {
   if (reduce) {
     return (
       <div className={cn("pointer-events-none absolute inset-0 -z-10", className)}>
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh animate-none" />
+        <div className="absolute inset-0 bg-noise" />
       </div>
     );
   }
@@ -24,7 +25,11 @@ export function HeroBackground({ className }: { className?: string }) {
         aria-hidden="true"
         className="absolute inset-0 bg-mesh"
         style={{ y }}
+        animate={{ scale: [1, 1.02, 1], rotate: [0, 0.6, 0] }}
+        transition={{ duration: 28, ease: "easeInOut", repeat: Infinity }}
       />
+      <div aria-hidden="true" className="absolute inset-0 bg-aurora" />
+      <div aria-hidden="true" className="absolute inset-0 bg-noise" />
     </div>
   );
 }

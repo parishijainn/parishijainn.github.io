@@ -148,40 +148,51 @@ const projects: ProjectItem[] = [
 const skills: SkillGroup[] = [
   {
     title: "Languages",
-    items: ["Java", "Python", "SQL", "JavaScript", "TypeScript", "C", "HTML/CSS", "R"],
+    items: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "C", "R", "HTML/CSS"],
   },
   {
-    title: "Libraries + Tools",
+    title: "Frameworks + Libraries",
     items: [
-      "PyTorch",
-      "TensorFlow",
-      "Scikit-learn",
+      "React",
+      "Next.js",
       "Pandas",
       "NumPy",
       "Matplotlib",
-      "Git",
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB",
+      "Scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "OpenCV",
+      "MediaPipe",
     ],
   },
   {
-    title: "Systems",
+    title: "Databases + Tools",
     items: [
-      "Object-Oriented Design",
-      "Backend services",
-      "Microservices",
-      "REST/JSON APIs",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Git",
+      "GitHub",
       "Linux/UNIX",
-      "SDLC",
-      "Cloud concepts",
+      "REST/JSON APIs",
+      "AWS Marketplace",
+    ],
+  },
+  {
+    title: "Concepts",
+    items: [
+      "Agentic AI systems, LLM workflows",
+      "Data analysis & modeling",
+      "Backend services",
+      "SDLC, debugging & testing",
+      "Accessibility / WCAG-minded development",
     ],
   },
 ];
 
 const contactLinks: Link[] = [
   { label: "Email", href: "mailto:parishij@andrew.cmu.edu" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/parishi–jain" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/parishi--jain/" },
   { label: "GitHub", href: "https://github.com/parishijainn" },
 ];
 
@@ -237,6 +248,11 @@ export const site = {
     title: "Beyond Work",
     items: interests,
   },
+  skillsFocusAreas: [
+    "Agentic AI + Accessibility",
+    "Backend + Data Systems",
+    "Human-Centered Products",
+  ],
   experience,
   projects,
   skills,

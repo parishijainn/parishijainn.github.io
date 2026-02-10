@@ -43,11 +43,6 @@ export function Footer() {
                     </a>
                   ))}
               </div>
-
-              <p className="mt-6 text-xs text-muted">
-                Tip: add your GitHub/LinkedIn URLs in{" "}
-                <span className="font-medium text-fg">`src/content/site.ts`</span>.
-              </p>
             </Card>
           </InView>
 
@@ -61,9 +56,7 @@ export function Footer() {
               </p>
               <div className="mt-6 h-px w-full bg-border/70" />
               <p className="mt-6 text-sm text-muted">
-                Want to customize sections? Edit content in{" "}
-                <span className="font-medium text-fg">`src/content/site.ts`</span>{" "}
-                — components will update automatically.
+                Designed to be calm, legible, and a little bit delightful.
               </p>
             </Card>
           </InView>
